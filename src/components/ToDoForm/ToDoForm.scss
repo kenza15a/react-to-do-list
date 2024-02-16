@@ -1,0 +1,29 @@
+@import'../../styles/main';
+  
+
+
+.todo{
+    &__input{ @include todo__input;}
+    &__form{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    &__task{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 0;
+        width: max-content;
+        
+    }
+   
+
+}
+/*********Small devices Mobile*********************/
+@media screen and (max-width:$small-screen) {
+    .todo{
+        &__input{ @include todo__input;
+        font-size: 0.7rem;}}
+
+
+}

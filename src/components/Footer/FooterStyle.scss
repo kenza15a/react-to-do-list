@@ -1,0 +1,80 @@
+@import'../../styles/main';
+
+footer {
+    &__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    position: static;
+    top: 100vh;
+    height: 10vh;
+    width: 100vw;
+    background: $secondary-color;
+    margin-bottom: 0;
+    margin-top: 2rem;
+    padding: 4rem auto;
+    }
+    &__infos{
+        display: grid;
+        grid-template-rows: 1fr;
+        padding-left: 1rem;
+    }
+    &__socials {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        align-items: center;
+        padding-top: 1rem;
+        &::after {
+            content: "";
+            width: 5rem;
+            height: 1px;
+            background: $forth-color;
+    }
+
+
+}
+&__icon {
+    font-size: 1.4rem;
+}
+&__rights {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    padding-bottom: 1rem;
+}
+
+&__rights p {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+}
+
+
+
+/*********medium devices Tablets*********************/
+@media screen and (max-width:medium-screen) {
+
+
+}
+
+/*********Small devices Mobile*********************/
+@media screen and (max-width:small-screen) {
+   footer{
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        position: static;
+        top: 100vh;
+        height: 15vh;
+        width: 100vw;
+        background: $secondary-color;
+        margin-bottom: 0;
+      
+       
+
+    }
+}
+}

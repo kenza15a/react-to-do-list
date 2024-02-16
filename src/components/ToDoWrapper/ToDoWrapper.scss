@@ -1,0 +1,93 @@
+@import "../../styles/main";
+.title{
+    @include title__h1;
+}
+ .todo{
+    &__wrapper{
+       
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        height: max-content;
+        padding: 1rem;
+        border-radius: 1rem;
+        background: $card-color;
+        border: 1px solid white;
+        height: 60vh;
+        overflow: scroll;
+        animation:todoListAnim  1s ease 0s 1 normal forwards;
+        z-index: 1000;
+        @include shadows;
+    }
+    &_text{
+        color: white;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+   
+    
+    
+ }
+ .one__task{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 2rem;
+    align-items: center;
+    width: 100%;
+ }
+ .crud{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem;
+
+    button{
+        border-radius: 1rem;
+       &.btn.complete{
+        color: white;
+        background-color: orange;
+        border: 1px sold orange;
+     
+       }
+       &.btn.incomplete{
+        color: white;
+        border: 1px solid white;
+       background-color: green;
+       }
+       &.btn.delete{
+        color: white;
+        border: 1px solid white;
+       background-color: red;
+       }
+    }
+}
+
+ 
+/*******************tablets****************************/
+@media screen and ( max-width:$medium-screen) {
+    
+    
+
+  
+}
+
+/*********Small devices Mobile*********************/
+@media screen and (max-width:$small-screen) {
+
+    .todo{
+        &__wrapper{
+          width: 90vw;
+        display: grid;
+        grid-template-columns: 1fr;
+         gap: 2rem;
+            height: max-content;
+            padding: 1rem;
+            border-radius: 1rem;
+            background: $secondary-color;
+        }
+        &_text{
+            color: white;
+            font-size: 1rem;
+        }
+
+}
+}
