@@ -4,16 +4,14 @@
 }
  .todo{
     &__wrapper{
-       
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
-        height: max-content;
+        height: 60vh;
         padding: 1rem;
         border-radius: 1rem;
         background: $card-color;
         border: 1px solid white;
-        height: 60vh;
         overflow: scroll;
         animation:todoListAnim  1s ease 0s 1 normal forwards;
         z-index: 1000;
@@ -75,14 +73,18 @@
 
     .todo{
         &__wrapper{
-          width: 90vw;
-        display: grid;
-        grid-template-columns: 1fr;
-         gap: 2rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
             height: max-content;
             padding: 1rem;
             border-radius: 1rem;
-            background: $secondary-color;
+            background: $card-color;
+            border: 1px solid white;
+            overflow: scroll;
+            animation:todoListAnim  1s ease 0s 1 normal forwards;
+            z-index: 1000;
+            @include shadows;
         }
         &_text{
             color: white;
