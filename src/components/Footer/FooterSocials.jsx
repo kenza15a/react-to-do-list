@@ -3,6 +3,7 @@ import './Footer.scss'
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
 import { FaBehanceSquare } from "react-icons/fa";
+import footerLogo from '../../assets/app footer logo.png'
 function FooterSocials() {
     return (
         <>
@@ -13,6 +14,8 @@ function FooterSocials() {
          <a href="https://github.com/kenza15a" target='_blank' rel="noreferrer"><FaSquareGithub className='footer__icon' />
      </a>
          <a href="https://www.behance.net/kenzafilali?log_shim_removal=1" target='_blank' rel="noreferrer"><FaBehanceSquare  className='footer__icon'/>
+     </a>
+     <a href="#" target='_self' className="footer__logo"><img  src={footerLogo} alt="a productivity app" />
      </a>
         </div>
         </>

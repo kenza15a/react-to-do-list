@@ -12,9 +12,8 @@ function ToDoForm() {
 
   const dispatch = useDispatch();
   const handleInputChange = (e) => {
-    e.preventDefault();
+    
     setText(e.target.value);
-    console.log(e.target.value);
   };
   const handleAddTask = (e) => {
     e.preventDefault()
@@ -30,13 +29,12 @@ function ToDoForm() {
           <input
             className="todo__input"
             type="text"
-            placeholder="une tâche pour aujourd'hui?"
+            placeholder="Des tâches  a ajouter?"
             onChange={handleInputChange}
             value={text}
           ></input>
           <button type="submit" className="btn btn-primary">
-            {" "}
-            Add <IoMdAdd />
+            <IoMdAdd />
           </button>
         </div>
       </form>

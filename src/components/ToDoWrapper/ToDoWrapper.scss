@@ -7,8 +7,10 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
-        height: 60vh;
-        padding: 1rem;
+        height: max-content;
+        max-height: 60vh;
+        width: 60vh;
+        padding: 1rem 0.5rem;
         border-radius: 1rem;
         background: $card-color;
         border: 1px solid white;
@@ -17,10 +19,29 @@
         z-index: 1000;
         @include shadows;
     }
+    &__tasks{
+       display: flex;
+       flex-direction: column;
+        height: 100%;
+       
+    }
+    &__options{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1rem;
+        align-items: center;
+    }
     &_text{
         color: white;
         font-size: 1rem;
         font-weight: 300;
+    }
+    &_initial__message{
+        display: inline;
+        font-size: 1.1rem;
+        text-align: center;
+        color: rgba($color: #ffffff, $alpha: 0.6);
+        margin-top: 2rem;
     }
    
     
@@ -75,21 +96,25 @@
         &__wrapper{
             display: grid;
             grid-template-columns: 1fr;
-            gap: 1rem;
+            gap: 2rem;
             height: max-content;
-            padding: 1rem;
+            max-height: 60vh;
+            width: 90%;
+            padding: 1rem 0.5rem;
             border-radius: 1rem;
-            background: $card-color;
+            background:$secondary-color;
             border: 1px solid white;
             overflow: scroll;
             animation:todoListAnim  1s ease 0s 1 normal forwards;
-            z-index: 1000;
             @include shadows;
         }
         &_text{
             color: white;
-            font-size: 1rem;
+            font-size: 0.9rem;
+            font-weight: 400;
+            text-wrap: wrap;
         }
+       
 
 }
 }
