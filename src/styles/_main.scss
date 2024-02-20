@@ -28,3 +28,12 @@
 
     border: 1px solid white;
 }
+@keyframes filters {
+    0% {
+      filter: brightness(100%) saturate(100%);
+    }
+    50% { filter: brightness(80%) saturate(150%);}
+    100% {
+      filter: brightness(50%) saturate(190%); /* Changer les valeurs de filtre selon vos préférences */
+    }
+  }

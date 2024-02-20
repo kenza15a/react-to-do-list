@@ -13,7 +13,7 @@ function Filters() {
  <>
  <div className="todo__filters">
               <label>
-                <select onChange={handleFilterChange}>
+                <select onChange={handleFilterChange} >
                   <option value="all">Toutes</option>
                   <option value="completed">Faites</option>
                   <option value="incomplete">A Faire </option>

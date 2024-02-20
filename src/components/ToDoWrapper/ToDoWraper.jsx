@@ -27,11 +27,11 @@ function ToDoWraper() {
   });
   const filteredTasks = useSelector((state) => state.todos.filteredTasks); // Use filtered tasks
   const handleToggleComplete = (id) => {
-    dispatch(toggleComplete(id));
+    dispatch(toggleComplete({ id }));
   };
-
+  
   const handleDeleteTodo = (id) => {
-    dispatch(deleteTodo(id));
+    dispatch(deleteTodo({ id }));
   };
 let displayedTasks=filteredTasks.length>0? filteredTasks:tasksList;
   return (

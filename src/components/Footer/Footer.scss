@@ -27,32 +27,38 @@
         padding-top: 1rem;
         &::after {
             content: "";
-            width: 5rem;
+            width: 3rem;
             height: 1px;
             background:white;
     }
+    & a{
+        & .footer__icon {
+            font-size: 1rem;
+            color: white;
+        }
     }
     
+    
+    }
+    & .footer__rights {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        padding-bottom: 1rem;
+        p {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+    }
    
        
 
 
 }
-&__icon {
-    font-size: 1.4rem;
-    color: white;
-}
-&__rights {
-    display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;
-    padding-bottom: 1rem;
-}
 
-&__rights p {
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.5);
-}
+
+
 &__logo{
     height: 3rem;
  width: 3rem;
@@ -70,27 +76,56 @@
 
 
 /*********medium devices Tablets*********************/
-@media screen and (max-width:medium-screen) {
+@media screen and (max-width:$medium-screen) {
 
 
 }
 
 /*********Small devices Mobile*********************/
-@media screen and (max-width:small-screen) {
-   footer{
+@media screen and (max-width:$small-screen) {
+   .footer{
     &__container {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        position: static;
-        top: 100vh;
-        height: 15vh;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     align-items: center;
+     gap: 3rem;
+        position: fixed;
+        bottom: 0;
+        height: 10vh;
         width: 100vw;
         background: $secondary-color;
         margin-bottom: 0;
-      
-       
+        
+        & .footer__socials {
+            animation:todoListAnim  1s ease 0s 1 normal backwards;
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+          
+            padding-top: 1rem;
+            &::after {
+                display: none;
+        }
+        & .footer__logo{
+            display: none;
+        }
+        & a{
+            & .footer__icon {
+                font-size: 1rem;
+                color: rgb(255, 255, 255);
+            }
+        }
+        }
+        & .footer__rights {
+             p {
+                margin-top: 1.3rem;
+                font-size: 0.6rem;
+                color: rgba(255, 255, 255, 0.5);
+            }
+            
+        }
 
     }
+    
 }
 }
