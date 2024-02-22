@@ -1,29 +1,32 @@
 @import "./variables";
-@mixin title__h1{
-    font-size: 2rem;
-    color: $secondary-color;
+@mixin title__h1 {
+  font-size: 2rem;
+  color: $secondary-color;
 }
-@mixin todo__input{
-    border-radius: 0.5rem  0rem 0rem 0.5rem;
-    padding: 0.5rem 1.2rem;
-    width: 100%;
-    display: inline;
-    color: $third-color;
-    border: 0.1rem  solid $primary-color;
-    font-size: 0.8rem;
+@mixin todo__input {
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+  padding: 0.5rem 1.2rem;
+  width: 100%;
+  display: inline;
+  color: $third-color;
+  border: 0.1rem solid $primary-color;
+  font-size: 0.8rem;
+  &:focus {
+    outline: none;
+  }
 }
-@mixin shadows{
-    -webkit-box-shadow: -3px 23px 15px 5px rgba(0,0,0,0.27); 
-    box-shadow: -3px 23px 15px 5px rgba(0,0,0,0.27);
+@mixin shadows {
+  -webkit-box-shadow: 21px 30px 3px -18px rgba(0, 0, 0, 0.05);
+  box-shadow: 21px 30px 3px -18px rgba(0, 0, 0, 0.05);
 }
 @keyframes todoListAnim {
-	0% {
-		opacity: 0;
-		transform: scale(1.4);
-	}
+  0% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
 
-	100% {
-		opacity: 1;
-		transform: scale(1);
-	}
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

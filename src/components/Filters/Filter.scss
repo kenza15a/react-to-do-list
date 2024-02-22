@@ -1,0 +1,15 @@
+@import "../../styles/main";
+.todo__filter__select{
+    padding: 0.6rem;
+    border-radius: 1rem;
+    background-color: white;
+    border: 1px solid $primary-color;
+}
+.todo__filters{
+    display: grid;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+    &__none{
+        display: none;
+    }
+}

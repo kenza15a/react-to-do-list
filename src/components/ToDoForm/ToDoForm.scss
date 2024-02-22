@@ -1,34 +1,36 @@
-@import'../../styles/main';
-  
+@import "../../styles/main";
 
-
-.todo{
-    &__input{ @include todo__input; 
-    }
-    &__form{
-        width: 100%;
-        & .todo__task{
-           display: flex;
-           flex-direction: row;
-           justify-content: start;
-            gap: 0;
-            width:100%;
-            height: 2rem;      
-            & button.btn.btn-primary{
-             font-size: 1.5rem;
-             
-            }
-        }
-    }
-    
+.todo {
+  &__input {
+    @include todo__input;
    
-
+    font-size: 1.5rem;
+    border-right: none;
+  }
+  &__form {
+    width: 50vh;
+    & .todo__task {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      width: 100%;
+      height: 40%;
+      & button.btn.btn-primary {
+        font-size: 2rem;
+        border-left: none;
+        border-color: black;
+       background-color: white;
+       color: $secondary-color;
+      }
+    }
+  }
 }
 /*********Small devices Mobile*********************/
-@media screen and (max-width:$small-screen) {
-    .todo{
-        &__input{ @include todo__input;
-        font-size: 0.7rem;}}
-
-
+@media screen and (max-width: $small-screen) {
+  .todo {
+    &__input {
+      @include todo__input;
+      font-size: 0.7rem;
+    }
+  }
 }

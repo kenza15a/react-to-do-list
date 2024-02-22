@@ -1,11 +1,13 @@
 import "./App.scss";
 import ToDoWraper from "./components/ToDoWrapper/ToDoWraper";
-
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Footer from "./components/Footer/Footer";
-import { Helmet } from "react-helmet";
+import ToDoForm from "./components/ToDoForm/ToDoForm";
+
 function App() {
   return (
     <>
+    <HelmetProvider>
       <Helmet>
         <title>My Productive Day App</title>
         <link
@@ -15,11 +17,12 @@ function App() {
         />
       </Helmet>
       <div className="alltodo__App">
-        <h1 className="title">Mes taches pour aujourd'hui </h1>
-        <ToDoWraper />
+      <ToDoForm />
+      <ToDoWraper />
       </div>
 
       <Footer />
+      </HelmetProvider>
     </>
   );
 }

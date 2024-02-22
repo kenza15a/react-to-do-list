@@ -1,120 +1,127 @@
 @import "../../styles/main";
-.title{
-    @include title__h1;
+.title {
+  @include title__h1;
 }
- .todo{
-    &__wrapper{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        height: max-content;
-        max-height: 60vh;
-        width: 60vh;
-        padding: 1rem 0.5rem;
-        border-radius: 1rem;
-        background: $card-color;
-        border: 1px solid white;
-        overflow: scroll;
-        animation:todoListAnim  1s ease 0s 1 normal forwards;
-        z-index: 1000;
-        @include shadows;
-    }
-    &__tasks{
-       display: flex;
-       flex-direction: column;
-        height: 100%;
-       
-    }
-    &__options{
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 1rem;
-        align-items: center;
-    }
-    &_text{
-        color: white;
-        font-size: 1rem;
-        font-weight: 300;
-    }
-    &_initial__message{
-        display: inline;
-        font-size: 1.1rem;
-        text-align: center;
-        color: rgba($color: #ffffff, $alpha: 0.6);
-        margin-top: 2rem;
-    }
-   
-    
-    
- }
- .one__task{
+.todo {
+  &__wrapper {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    margin-top: 2rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    height: max-content;
+    max-height: 60vh;
+    width: 50vh;
+    padding: 1rem 0.5rem;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
+    scrollbar-color: $third-color;
+    animation: todoListAnim 1s ease 0s 1 normal forwards;
+    z-index: 1000;
+  }
+  &__tasks {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  &__options {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
     align-items: center;
-    width: 100%;
- }
- .crud{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.4rem;
+  }
+  &_text {
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+  &_initial__message {
+    display: inline;
+    font-size: 1.1rem;
+    text-align: center;
+    color: rgba($color: #000000, $alpha: 0.6);
+    margin-top: 2rem;
+  }
+}
+.one__task {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 2rem;
+  padding: 0.6rem;
+  align-items: center;
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid $primary-color;
+  background: white;
 
-    button{
-        border-radius: 1rem;
-       &.btn.complete{
+  font-size: 1rem;
+  @include shadows;
+  &:hover {
+    background: rgba($color: #000000, $alpha: 0.2);
+  }
+}
+.crud {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+
+  button {
+    border-radius: 1rem;
+    &.btn.complete {
+      color: green;
+      background-color: rgb(255, 255, 255);
+      border: 1px solid green;
+      &:hover {
         color: white;
-        background-color: orange;
-        border: 1px sold orange;
-     
-       }
-       &.btn.incomplete{
-        color: white;
+        background-color: green;
         border: 1px solid white;
-       background-color: green;
-       }
-       &.btn.delete{
-        color: white;
-        border: 1px solid white;
-       background-color: red;
-       }
+      }
     }
+    &.btn.incomplete {
+      color: white;
+      border: 1px solid white;
+      background-color: green;
+    }
+    &.btn.delete {
+      color: red;
+      border: 1px solid red;
+      background-color: white;
+      &:hover {
+        color: white;
+        border: 1px solid white;
+        background-color: red;
+      }
+    }
+  }
 }
 
- 
 /*******************tablets****************************/
-@media screen and ( max-width:$medium-screen) {
-    
-    
-
-  
+@media screen and (max-width: $medium-screen) {
 }
 
 /*********Small devices Mobile*********************/
-@media screen and (max-width:$small-screen) {
-
-    .todo{
-        &__wrapper{
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            height: max-content;
-            max-height: 60vh;
-            width: 90%;
-            padding: 1rem 0.5rem;
-            border-radius: 1rem;
-            background:$secondary-color;
-            border: 1px solid white;
-            overflow: scroll;
-            animation:todoListAnim  1s ease 0s 1 normal forwards;
-            @include shadows;
-        }
-        &_text{
-            color: white;
-            font-size: 0.9rem;
-            font-weight: 400;
-            text-wrap: wrap;
-        }
-       
-
-}
+@media screen and (max-width: $small-screen) {
+  .todo {
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      height: max-content;
+      max-height: 60vh;
+      width: 90%;
+      padding: 1rem 0.5rem;
+      border-radius: 1rem;
+      background: $secondary-color;
+      border: 1px solid white;
+      overflow: scroll;
+      animation: todoListAnim 1s ease 0s 1 normal forwards;
+      @include shadows;
+    }
+    &_text {
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 400;
+      text-wrap: wrap;
+    }
+  }
 }

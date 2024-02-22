@@ -1,13 +1,13 @@
-@import'../../styles/main';
+@import "../../styles/main";
 
-.todo__search{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1;
+.todo__search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1;
 
-    &__input{
-        @include todo__input;
-        border-radius:0.7rem;
-    }
+  &__input {
+    @include todo__input;
+    border-radius: 0.7rem;
+  }
 }

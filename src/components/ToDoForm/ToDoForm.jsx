@@ -2,21 +2,17 @@ import React, { useState } from "react";
 import "./ToDoForm.scss";
 import { IoMdAdd } from "react-icons/io";
 import { useDispatch } from "react-redux";
-import {
-  addTodo,
- 
-} from "../../redux/slices/todolist";
+import { addTodo } from "../../redux/slices/todolist";
 
 function ToDoForm() {
   const [text, setText] = useState("");
 
   const dispatch = useDispatch();
   const handleInputChange = (e) => {
-    
     setText(e.target.value);
   };
   const handleAddTask = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (text) {
       dispatch(addTodo(text));
       setText("");
@@ -29,7 +25,7 @@ function ToDoForm() {
           <input
             className="todo__input"
             type="text"
-            placeholder="Des tâches  a ajouter?"
+            placeholder="Ajouant ds tâches!"
             onChange={handleInputChange}
             value={text}
           ></input>
