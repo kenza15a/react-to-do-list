@@ -47,14 +47,13 @@ body{
     height: 100vh;
   }
   .alltodo__App{
-    padding: 1rem;
+    width: 90%;
+    padding: 0.6rem;
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
     gap: 2rem;
     height: 100%;
-   
-   
   }
   .title{
     margin-top: 1rem;

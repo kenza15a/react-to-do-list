@@ -14,8 +14,6 @@
     overflow: scroll;
     scroll-behavior: smooth;
     scrollbar-width: none;
-
-    scrollbar-color: $third-color;
     animation: todoListAnim 1s ease 0s 1 normal forwards;
     z-index: 1000;
   }
@@ -101,6 +99,47 @@
 
 /*********Small devices Mobile*********************/
 @media screen and (max-width: $small-screen) {
+    .todo {
+        &__wrapper {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1rem;
+          height: max-content;
+          max-height: 60vh;
+          width: 50vh;
+          padding: 1rem;
+          overflow: scroll;
+          scroll-behavior: smooth;
+          scrollbar-width: none;
+        
+          animation: todoListAnim 1s ease 0s 1 normal forwards;
+          z-index: 1000;
+        }
+        &__tasks {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+        &__options {
+          display: grid;
+          grid-template-columns: auto 2fr;
+          gap:0.3rem;
+          align-items: center;
+        }
+        &_text {
+          color: rgb(0, 0, 0);
+          font-size: 0.9rem;
+          font-weight: 300;
+        }
+        &_initial__message {
+          display: inline;
+          font-size: 1.1rem;
+          text-align: center;
+          color: rgba($color: #000000, $alpha: 0.6);
+          margin-top: 2rem;
+        }
+      }
+
     .one__task {
         display: grid;
         grid-template-columns: 2fr auto;
