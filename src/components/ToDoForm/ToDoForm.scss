@@ -30,7 +30,25 @@
   .todo {
     &__input {
       @include todo__input;
-      font-size: 0.7rem;
+      font-size: 1rem;
+    }
+    &__form {
+      width: 100%;
+      & .todo__task {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        width: 100%;
+        height: 40%;
+        & button.btn.btn-primary {
+          font-size: 1rem;
+          border-left: none;
+          border-color: black;
+         background-color: white;
+         color: $secondary-color;
+        }
+      }
     }
   }
-}
+  }
+

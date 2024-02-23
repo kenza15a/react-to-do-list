@@ -26,7 +26,7 @@
   }
   &__options {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: auto 2fr;
     gap: 1rem;
     align-items: center;
   }
@@ -101,27 +101,20 @@
 
 /*********Small devices Mobile*********************/
 @media screen and (max-width: $small-screen) {
-  .todo {
-    &__wrapper {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      height: max-content;
-      max-height: 60vh;
-      width: 90%;
-      padding: 1rem 0.5rem;
-      border-radius: 1rem;
-      background: $secondary-color;
-      border: 1px solid white;
-      overflow: scroll;
-      animation: todoListAnim 1s ease 0s 1 normal forwards;
-      @include shadows;
-    }
-    &_text {
-      color: white;
-      font-size: 0.9rem;
-      font-weight: 400;
-      text-wrap: wrap;
-    }
-  }
+    .one__task {
+        display: grid;
+        grid-template-columns: 2fr auto;
+        margin-top: 2rem;
+        padding: 0.3rem;
+        align-items: center;
+        width: 100%;
+        border-radius: 1rem;
+        border: 1px solid $primary-color;
+        background: white;
+        font-size: 1rem;
+        &:hover {
+          background: rgba($color:$fifth-color, $alpha: 0.9);
+        }
+      }
+ 
 }

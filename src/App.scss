@@ -71,7 +71,8 @@ body{
     background-color: $third-color;
     color: white;
     font-family: 'Poppins', sans-serif;
-    background: #ffffff url('./assets/bg photo by kenza.jpg') center center/cover no-repeat;
+   background: #ffffff url('./assets/bg photo by kenza.jpg') right center/contain no-repeat;
+    background-size: cover;
     font-family: poppins;
     height: 100vh;
 
@@ -79,11 +80,12 @@ body{
   }
   
   .alltodo__App{
-    padding: 2rem;
+    padding: 1rem;
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
-    gap: 2rem;
+    width: 100vw;
+    gap: 1rem;
    
     }
     .title{
