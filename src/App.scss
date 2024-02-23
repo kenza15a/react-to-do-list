@@ -1,6 +1,5 @@
-
 @import "./styles/main";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
   margin: 0;
@@ -10,44 +9,42 @@
   list-style: none;
   text-decoration: none;
 }
-body{
-
+body {
   background-color: $third-color;
   color: white;
-  font-family: 'Poppins', sans-serif;
-  background: #ffffff url('./assets/bg photo by kenza.jpg') right center/contain no-repeat;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff url("./assets/bg photo by kenza.jpg") right center/contain
+    no-repeat;
   font-family: poppins;
   height: 100vh;
 }
-.alltodo__App{
+.alltodo__App {
   padding: 3rem;
   display: grid;
   grid-template-columns: 1fr;
   place-items: center;
   gap: 2rem;
   margin-top: 1.5rem;
- 
 }
-.title{
+.title {
   margin-top: 1rem;
-  animation:todoListAnim  0.5s ease 0s 1 normal forwards;
+  animation: todoListAnim 0.5s ease 0s 1 normal forwards;
 }
 /*******************tablets**************
 **************/
-@media screen and ( max-width:$medium-screen) {
-    
-  body{
-
+@media screen and (max-width: $medium-screen) {
+  body {
     background-color: $third-color;
     color: white;
-    font-family: 'Poppins', sans-serif;
-    background: #ffffff url('./assets/bg photo by kenza.jpg') right center/contain no-repeat;
-    background-size: cover;
+    font-family: "Poppins", sans-serif;
+    background: #ffffff url("./assets/bg photo by kenza.jpg") right center/cover
+      no-repeat;
     font-family: poppins;
+    width: 100vw;
     height: 100vh;
   }
-  .alltodo__App{
-    width: 90%;
+  .alltodo__App {
+    width: 100%;
     padding: 0.6rem;
     display: grid;
     grid-template-columns: 1fr;
@@ -55,40 +52,34 @@ body{
     gap: 2rem;
     height: 100%;
   }
-  .title{
+  .title {
     margin-top: 1rem;
-    animation:todoListAnim  0.5s ease 0s 1 normal forwards;
+    animation: todoListAnim 0.5s ease 0s 1 normal forwards;
   }
-
-  
 }
 
 /*********Small devices Mobile*********************/
-@media screen and (max-width:$small-screen) {
-  body{
-  
+@media screen and (max-width: $small-screen) {
+  body {
     background-color: $third-color;
     color: white;
-    font-family: 'Poppins', sans-serif;
-   background: #ffffff url('./assets/bg photo by kenza.jpg') right center/contain no-repeat;
+    font-family: "Poppins", sans-serif;
+    background: #ffffff url("./assets/bg photo by kenza.jpg") right
+      center/contain no-repeat;
     background-size: cover;
     font-family: poppins;
     height: 100vh;
-
-  
   }
-  
-  .alltodo__App{
+
+  .alltodo__App {
     padding: 1rem;
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
     width: 100vw;
     gap: 1rem;
-   
-    }
-    .title{
-      margin-top: 0.6rem;
-    }
-    
+  }
+  .title {
+    margin-top: 0.6rem;
+  }
 }
