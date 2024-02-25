@@ -1,0 +1,61 @@
+@import "./styles/main";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: $third-color;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff url("./assets/bg photo by kenza.jpg") right center/contain
+    no-repeat;
+  font-family: poppins;
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (max-width: $medium-screen) {
+
+body {
+  background-color: $third-color;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff url("./assets/bg photo by kenza.jpg") right center/cover
+    no-repeat;
+  font-family: poppins;
+  width: 100vw;
+  height: 100vh;
+}
+}
+@media screen and (max-width: $small-screen) {
+
+/*small screen*/
+body {
+  background-color: $third-color;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff url("./assets/todoapp-bg2.jpg") top center/cover
+    no-repeat;
+  background-size: cover;
+  font-family: poppins;
+  height: 100vh;
+}
+}
