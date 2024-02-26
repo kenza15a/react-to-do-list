@@ -25,7 +25,7 @@ function ToDoForm() {
           <input
             className="todo__input"
             type="text"
-            placeholder="Ajouant ds tâches!"
+            placeholder="Ajouant des tâches!"
             onChange={handleInputChange}
             value={text}
           ></input>

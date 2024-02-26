@@ -3,12 +3,11 @@
 .todo {
   &__input {
     @include todo__input;
-   
-    font-size: 1.5rem;
+    font-size: 1rem;
     border-right: none;
   }
   &__form {
-    width: 50vh;
+    width: 60vh;
     & .todo__task {
       display: flex;
       flex-direction: row;
@@ -19,8 +18,8 @@
         font-size: 2rem;
         border-left: none;
         border-color: black;
-       background-color: white;
-       color: $secondary-color;
+        background-color: $secondary-color;
+        color: aliceblue;
       }
     }
   }
@@ -44,11 +43,10 @@
           font-size: 1rem;
           border-left: none;
           border-color: black;
-         background-color: white;
-         color: $secondary-color;
+          background-color: white;
+          color: $secondary-color;
         }
       }
     }
   }
-  }
-
+}
