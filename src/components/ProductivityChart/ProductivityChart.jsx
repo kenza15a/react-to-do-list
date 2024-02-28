@@ -1,8 +1,8 @@
 // ProductivityChart.js
 import React from "react";
 import { useSelector } from "react-redux";
-import { PieChart, Pie, Cell, Label } from "recharts";
-import './ProductivityChart.scss';
+import { PieChart, Pie, Cell, Label, ResponsiveContainer } from "recharts";
+import "./ProductivityChart.scss";
 const ProductivityChart = () => {
   const tasks = useSelector((state) => state.todos.tasks); // Assuming your tasks are stored in Redux state
 
@@ -22,15 +22,15 @@ const ProductivityChart = () => {
   // Define colors for the chart
   const colors = ["#13c90f", "#000000"];
 
-  return (
-
-   tasks.length>0?(  <PieChart width={200} height={200}>
+  return tasks.length > 0 ? (
+    <ResponsiveContainer width="100%" height="100%">
+      <PieChart width="100%" height="100%">
         <Pie
           data={data}
-          cx={100}
-          cy={100}
-          innerRadius={40}
-          outerRadius={60}
+          cx={"50%"}
+          cy={"50%"}
+          innerRadius={"90%"}
+          outerRadius={"100%"}
           fill="#8884d8"
           paddingAngle={2}
           dataKey="value"
@@ -53,21 +53,23 @@ const ProductivityChart = () => {
                   dominantBaseline="central"
                   fontSize={7}
                   fill="#000"
+                  style={{ fontSize: '0.5rem'}
+                }
+                
                 >
-                  {`${percentageCompleted}%  completed tasks`}
+                  {`${percentageCompleted}  completed tasks`}
                 </text>
               );
             }}
           />
         </Pie>
-      </PieChart>):(
-        <div className="productivity__message">
-            <p>Add some tasks to see the magic🪄!</p>
-        </div>
-      )
-
-
-  
+      </PieChart>
+      </ResponsiveContainer>
+   
+  ) : (
+    <div className="productivity__message">
+      <p>Add some tasks to see the magic🪄!</p>
+    </div>
   );
 };
 

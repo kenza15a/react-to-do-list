@@ -6,28 +6,26 @@
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
     height: max-content;
     max-height: 70vh;
     width: 60vh;
-    padding-top:1rem;
     overflow: scroll;
     scroll-behavior: smooth;
     scrollbar-width: none;
     animation: todoListAnim 1s ease 0s 1 normal forwards;
     z-index: 1000;
+    & .todo__tasks {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+       
+      }
   }
-  &__tasks {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  &__options {
-    display: grid;
-    grid-template-columns: auto 2fr;
-    gap: 1rem;
-    align-items: center;
-  }
+  
+ 
   &_text {
     color: rgb(255, 255, 255);
     font-size: 0.9rem;
@@ -39,6 +37,13 @@
     text-align: center;
     color: rgba($color: #000000, $alpha: 0.6);
     margin-top: 2rem;
+  }
+  &__options {
+   margin:0.6rem auto ;
+    display: grid;
+    grid-template-columns: auto 2fr;
+    gap: 1rem;
+    align-items: center;
   }
 }
 .one__task {
@@ -94,6 +99,21 @@
 
 /*******************tablets****************************/
 @media screen and (max-width: $medium-screen) {
+    .todo {
+        &__wrapper {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          height: max-content;
+          max-height: 50vh;
+          width: 60vh;
+          padding-top:1rem;
+          overflow: scroll;
+          scroll-behavior: smooth;
+          scrollbar-width: none;
+          animation: todoListAnim 1s ease 0s 1 normal forwards;
+          z-index: 1000;
+        }}
 }
 
 /*********Small devices Mobile*********************/

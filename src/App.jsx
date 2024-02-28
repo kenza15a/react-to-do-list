@@ -42,7 +42,6 @@ function App() {
             </div>
             <div className="side">
               <RandomQuote />
-            
             </div>
           </div>
         )}

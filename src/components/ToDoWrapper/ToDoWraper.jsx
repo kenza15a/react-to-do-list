@@ -52,11 +52,12 @@ function ToDoWrapper() {
 
   return (
     <>
-      <div className="todo__wrapper">
-        <div className="todo__options">
+      <div className="todo__options">
           <Filters onFilterChange={handleFilterChange} />
           <SearchForm onSearchChange={handleSearchChange} />
         </div>
+      <div className="todo__wrapper">
+      
 
         <div className="todo__tasks">
           {displayedTasks.length > 0 ? (

@@ -1,7 +1,7 @@
 import React from 'react';
 import './ToDoWrapperSkelton.scss';
 function TodoWrapperSkelton() {
-  const iterations = 15;
+  const iterations = 5;
 
   // Generate an array of length `iterations`
   const skeletonTasks = Array.from({ length: iterations }, (_, index) => (
