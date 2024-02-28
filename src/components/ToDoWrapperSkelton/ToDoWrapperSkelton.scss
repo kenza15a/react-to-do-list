@@ -1,0 +1,33 @@
+@import '../../styles/main';
+.tasks__skelton{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 2rem;
+    height: 100%;
+  
+& .skelton_one_task{
+    height: 3rem;
+    width: 100%;
+    border-radius: 1rem;
+    animation: skeltonAnim 3s ease-in-out 0s infinite normal backwards;
+    @include shadows;
+
+}
+
+}
+
+@keyframes skeltonAnim {
+	0% {
+   
+		background: linear-gradient(0deg, #d6d6d6 0%, #ffffff 100%);
+	}
+
+	100% {
+      
+        background: linear-gradient(0deg, #b0b0b0 0%, #ffffff 100%);
+        opacity: 0.4;
+
+	
+}
+}

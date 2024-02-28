@@ -1,15 +1,19 @@
 @import "./styles/main";
 
 .alltodo__App {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 3rem;
+  gap: 3rem;
   margin: 1.5rem auto;
   height: 100%;
   width: 100%;
- 
+  &.centered {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .title {
   margin-top: 1rem;
@@ -18,7 +22,6 @@
 /*******************tablets**************
 **************/
 @media screen and (max-width: $medium-screen) {
- 
   .alltodo__App {
     width: 100%;
     padding: 0.6rem;
@@ -36,14 +39,12 @@
 
 /*********Small devices Mobile*********************/
 @media screen and (max-width: $small-screen) {
-
-
   .alltodo__App {
-   display: flex;
-   flex-direction: column;
-   justify-content: start;
-   align-items: center;
-   gap: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 0.6rem;
   }
   .title {
     margin-top: 0.6rem;

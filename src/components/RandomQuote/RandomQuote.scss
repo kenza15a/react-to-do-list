@@ -1,0 +1,24 @@
+@import "../../styles/main";
+.quotes__title {
+  font-size: 2rem;
+  color: $green-color;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.random__quote {
+  padding: 2rem;
+  background-color: bisque;
+  height: 20vh;
+  width: 90%;
+  border-radius: 1rem;
+  color: $primary-color;
+  @include shadows;
+  &__text {
+    color: $primary-color;
+    font-size: 1rem;
+  }
+  &__author {
+    color: rgba($color: #000000, $alpha: 0.5);
+    font-size: 0.5rem;
+  }
+}

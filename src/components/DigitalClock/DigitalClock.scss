@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Anta&display=swap");
+@import "../../styles/main";
+.digital-clock {
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+  color: $green-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  :hover{
+    color: $primary-color;
+
+  }
+}
+
+.digital-clock-display {
+  padding: 0.4rem;
+  border: 2px solid $primary-color;
+  border-radius: 0.5rem;
+}

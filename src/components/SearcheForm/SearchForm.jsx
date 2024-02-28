@@ -49,7 +49,7 @@ function SearchForm({ onSearchChange }) {
       <input
       className="todo__search__input"
         type="text"
-        placeholder="Trouvez une tache...🔎"
+        placeholder="Find a task..🔎"
         value={query}
         onChange={handleChange}
       />

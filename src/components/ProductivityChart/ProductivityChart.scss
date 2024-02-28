@@ -1,0 +1,19 @@
+
+@import '../../styles/main';
+.productivity__message{
+    color: $primary-color;
+    padding: 1rem;
+    animation: productivity__message__anim 3s ease 0s infinite normal forwards;
+}
+@keyframes productivity__message__anim {
+    0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}

@@ -8,8 +8,11 @@ const Loader = () => {
       <div className="loader-dot" id="r"></div>
       <div className="loader-dot" id="o"></div>
       <div className="loader-dot" id="d"></div>
-      <div className="loader-dot" id="uctivity"></div>
       <div className="loader-dot"></div>
+      <div className="loader-dot"></div>
+      <div className="loader-dot"></div>
+      <div className="loader-dot"></div>
+    
     </div>
   );
 };

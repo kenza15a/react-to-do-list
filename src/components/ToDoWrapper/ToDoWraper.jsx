@@ -1,9 +1,6 @@
-import React, { useState } from "react";
 import "./ToDoWrapper.scss";
-import ToDoForm from "../ToDoForm/ToDoForm";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  addTodo,
   deleteTodo,
   toggleComplete,
   setFilter,
@@ -14,6 +11,7 @@ import { RiListCheck3 } from "react-icons/ri";
 import { MdDeleteOutline } from "react-icons/md";
 import SearchForm from "../SearcheForm/SearchForm";
 import Filters from "../Filters/Filters";
+import TodoWrapperSkelton from "../ToDoWrapperSkelton/TodoWrapperSkelton";
 
 function ToDoWrapper() {
   const dispatch = useDispatch();
@@ -92,7 +90,7 @@ function ToDoWrapper() {
               ))}
             </ul>
           ) : (
-            <p className="todo_initial__message">Aucune tache trouvée!</p>
+            <TodoWrapperSkelton/>
           )}
         </div>
       </div>

@@ -4,7 +4,11 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Footer from "./components/Footer/Footer";
 import ToDoForm from "./components/ToDoForm/ToDoForm";
 import Loader from "./components/Loader/Loader";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
+
+import Widgets from "./widgets/Widgets";
+import RandomQuote from "./components/RandomQuote/RandomeQuote";
+
 
 function App() {
   const [showLoader, setShowLoader] = useState(true);
@@ -20,17 +24,28 @@ function App() {
     <>
       <HelmetProvider>
         <Helmet>
-         
           <title>My Productive Day App</title>
           <link rel="icon" type="image/png" href="./assets/favicon app.png" />
         </Helmet>
-        <div className="alltodo__App">
-        {showLoader?<Loader />:
-        <> <ToDoForm />
-        <ToDoWraper /></>
-         
-        }
-        </div>
+
+        {showLoader ? (
+          <div className="alltodo__App centered">
+            <Loader />
+          </div>
+        ) : (
+          <div className="alltodo__App">
+            {" "}
+            <Widgets />
+            <div className="main">
+              <ToDoForm fieldText="Some tasks for today!" />
+              <ToDoWraper />
+            </div>
+            <div className="side">
+              <RandomQuote />
+            
+            </div>
+          </div>
+        )}
 
         <Footer />
       </HelmetProvider>

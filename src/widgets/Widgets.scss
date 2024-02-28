@@ -1,0 +1,18 @@
+@import "../styles/main";
+.widgets {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding:0.5rem 25%;
+  gap: 2rem;
+  height: 70vh;
+  width: auto;
+  & .widget {
+    display: grid;
+    place-items: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 1rem;
+    background-color: rgb(240, 238, 236);
+    @include shadows;
+  }
+}

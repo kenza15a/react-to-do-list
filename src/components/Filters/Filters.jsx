@@ -18,9 +18,9 @@ function Filters({ onFilterChange }) {
       </button>
       {showFilters ? (
         <div  className="todo__filters">
-          <button  onClick={() => handleClick("all")}>Toutes</button>
-          <button onClick={() => handleClick("completed")}>Faites</button>
-          <button onClick={() => handleClick("incomplete")}>A Faire</button>
+          <button  onClick={() => handleClick("all")}>All</button>
+          <button onClick={() => handleClick("completed")}>Completed</button>
+          <button onClick={() => handleClick("incomplete")}>To do</button>
         </div>
       ) : (
         <div className="todo_filters_none"></div>

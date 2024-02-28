@@ -1,66 +1,62 @@
-@import '../../styles/main';
+@import "../../styles/main";
 .loader {
   display: grid;
-grid-template-rows: 1fr;
-
-padding: 2rem;
-gap: 3rem;
+  grid-template-columns: 1fr;
+  padding: 2rem;
+  gap: 3rem;
 }
 
 .loader-dot {
-  width: 2rem;
-  height: 2rem;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
-  background-color: $third-color;
+  background-color: $green-color;
   margin: 0 5px;
- 
+
   &#p {
     background-color: none;
     background: transparent url("../../assets/Loader letters/P.png") right
       center/contain no-repeat;
-      animation: loader-animation 0.5s infinite ease-in-out;
+    animation: loader-animation 0.5s infinite ease-in-out;
   }
   &#r {
     background-color: none;
-    background:transparent url("../../assets/Loader letters/R.png") right
+    background: transparent url("../../assets/Loader letters/R.png") right
       center/contain no-repeat;
-      animation: loader-animation 1s infinite ease-in-out;
+    animation: loader-animation 1s infinite ease-in-out;
   }
   &#o {
     background-color: none;
     background: transparent url("../../assets/Loader letters/O.png") right
       center/contain no-repeat;
-      animation: loader-animation 1.5s infinite ease-in-out;
+    animation: loader-animation 1.5s infinite ease-in-out;
   }
   &#d {
     background-color: none;
-    background:transparent url("../../assets/Loader letters/D.png") right
+    background: transparent url("../../assets/Loader letters/D.png") right
       center/contain no-repeat;
-      animation: loader-animation 2s infinite ease-in-out;
+    animation: loader-animation 2s infinite ease-in-out;
   }
   &#uctivity {
     width: 2rem;
     height: 1rem;
     aspect-ratio: 1;
     background-color: none;
-    background:transparent url("../../assets/Loader letters/ductivity.png") right
-      center/contain no-repeat;
-      animation: loader-animation 2.5s infinite ease-in-out;
+    background: transparent url("../../assets/Loader letters/ductivity.png")
+      right center/contain no-repeat;
+    animation: loader-animation 2.5s infinite ease-in-out;
   }
 }
 
 @keyframes loader-animation {
   0% {
-  
     transform: scale(1);
   }
   50% {
     transform: scale(1.5);
-    
   }
   100% {
     transform: scale(1);
- 
   }
 }
 

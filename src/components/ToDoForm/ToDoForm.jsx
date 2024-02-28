@@ -4,7 +4,7 @@ import { IoMdAdd } from "react-icons/io";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../../redux/slices/todolist";
 
-function ToDoForm() {
+function ToDoForm({fieldText}) {
   const [text, setText] = useState("");
 
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ function ToDoForm() {
           <input
             className="todo__input"
             type="text"
-            placeholder="Ajouant des tâches!"
+            placeholder={fieldText}
             onChange={handleInputChange}
             value={text}
           ></input>
