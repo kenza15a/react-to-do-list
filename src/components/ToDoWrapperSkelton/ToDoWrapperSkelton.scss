@@ -5,6 +5,8 @@
     justify-content: start;
     gap: 2rem;
     height: 100%;
+    width: 80%;
+    background-color: red;
   
 & .skelton_one_task{
     height: 3rem;
@@ -16,7 +18,26 @@
 }
 
 }
-
+@media screen and (max-width: $medium-screen) {
+    .tasks__skelton{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 2rem;
+        height: 100%;
+        width: 80%;
+    
+    & .skelton_one_task{
+        height: 3rem;
+        width: 100%;
+        border-radius: 1rem;
+        animation: skeltonAnim 3s ease-in-out 0s infinite normal backwards;
+        @include shadows;
+    
+    }
+    
+    }
+}
 @keyframes skeltonAnim {
 	0% {
    

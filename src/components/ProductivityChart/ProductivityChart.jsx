@@ -20,7 +20,7 @@ const ProductivityChart = () => {
   ];
 
   // Define colors for the chart
-  const colors = ["#13c90f", "#000000"];
+  const colors = ["#13c90f", "#3f60a5"];
 
   return tasks.length > 0 ? (
     <ResponsiveContainer width="100%" height="100%">
@@ -43,22 +43,28 @@ const ProductivityChart = () => {
           <Label
             value={() => `${percentageCompleted}% completed tasks`}
             position="center"
+          
             content={({ viewBox }) => {
               const { cx, cy } = viewBox;
               return (
-                <text
+                <text 
                   x={cx}
                   y={cy}
                   textAnchor="middle"
                   dominantBaseline="central"
                   fontSize={7}
-                  fill="#000"
-                  style={{ fontSize: '0.5rem'}
+                  fill="#13c90f"
+                  style={{ fontSize: '50%'}
+                  
                 }
-                
+              
                 >
-                  {`${percentageCompleted}  completed tasks`}
-                </text>
+               {`${percentageCompleted}% `}
+        <tspan x={cx} dy="1em" className="text" >
+        Tasks completed
+      
+        </tspan>
+      </text>
               );
             }}
           />

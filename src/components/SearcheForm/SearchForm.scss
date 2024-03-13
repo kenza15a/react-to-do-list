@@ -12,3 +12,18 @@
     padding: 1rem;
   }
 }
+/*******************tablets****************************/
+@media screen and (max-width: $medium-screen) {
+  .todo__search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  
+    &__input {
+      @include todo__input;
+      border-radius: 0.7rem;
+      padding: 1rem;
+    }
+  }
+}

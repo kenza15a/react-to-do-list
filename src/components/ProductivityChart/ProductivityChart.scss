@@ -1,30 +1,37 @@
+@import "../../styles/main";
 
-@import '../../styles/main';
-
-
-.productivity__message{
-    color: $primary-color;
-    padding: 1rem;
-    animation: productivity__message__anim 3s ease 0s infinite normal forwards;
+.productivity__message {
+  color: $primary-color;
+  padding: 1rem;
+  animation: productivity__message__anim 3s ease 0s infinite normal forwards;
+}
+.text{
+	color: red;
 }
 @keyframes productivity__message__anim {
-    0%,
-	50%,
-	100% {
-		opacity: 1;
-	}
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
 
-	25%,
-	75% {
-		opacity: 0;
-	}
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
 @media screen and (max-width: $medium-screen) {
-    
-.productivity__message{
+  .productivity__message {
     color: $primary-color;
     font-size: 0.6rem;
     padding: 0.4rem;
-   
+  }
 }
+@media screen and (max-width: $small-screen) {
+  .productivity__message {
+    color: white;
+    font-size: 0.6rem;
+    padding: 0.4rem;
+  }
+  
 }

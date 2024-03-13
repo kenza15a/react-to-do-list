@@ -2,16 +2,15 @@
 .widgets {
   display: grid;
   grid-template-rows: auto;
-  padding:0.5rem 25%;
+  padding: 0.5rem 25%;
   gap: 2rem;
   height: 70vh;
 
-   button {
+  button {
     display: block;
     width: fit-content;
     padding: 0.4rem;
-
-   }
+  }
   & .widget {
     display: grid;
     place-items: center;
@@ -24,53 +23,49 @@
 }
 /*******************tablets****************************/
 @media screen and (max-width: $medium-screen) {
-    .widgets {
-        display: grid;
-        grid-template-columns: 1fr ;
-        gap: 2rem;
-        height: 20vh;
-        width: auto;
-        position: fixed;
-        bottom: 50%;
-        left:  0%;
-        transform: translateX(-40%);
-        button{
-            display: block;
-           }
-       
-        & .widget {
-          display: grid;
-          place-items: center;
-          height:6rem;
-          width: 6rem;
-          border-radius: 1rem;
-          background-color: rgb(240, 238, 236);
-          @include shadows;
-        }
-      }
+  .widgets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    height: 20vh;
+    width: auto;
+    place-items: center;
+    @include container(rgba(0, 0, 0, 0.3));
+    button {
+      display: block;
+    }
+
+    & .widget {
+      display: grid;
+      place-items: center;
+      height: 6rem;
+      width: 6rem;
+      border-radius: 1rem;
+      background-color: rgb(240, 238, 236);
+      @include shadows;
+    }
+  }
 }
 /*******************PHones****************************/
 @media screen and (max-width: $small-screen) {
-    .widgets {
-        display: grid;
-        grid-template-columns:  1fr 1fr ;
-        gap: 2rem;
-        height: 20vh;
-        width: auto;
-        position: fixed;
-        top: 70%;
-        left:  0%;
-        transform: translateX(-40%);
-        z-index: 2000;
-       
-        & .widget {
-          display: grid;
-          place-items: center;
-          height:6rem;
-          width: 6rem;
-          border-radius: 1rem;
-          background-color: rgb(240, 238, 236);
-          @include shadows;
-        }
-      }
+  .widgets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    height: 20vh;
+    width: auto;
+    place-items: center;
+    @include container(rgba(0, 0, 0, 0.3));
+  
+
+    & .widget {
+      display: grid;
+      place-items: center;
+      height: 6rem;
+      width: 6rem;
+      border-radius: 1rem;
+      background-color:$primary-color;
+      @include shadows;
+    }
+  }
 }

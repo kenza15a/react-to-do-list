@@ -30,3 +30,15 @@
     height: 70%;
   }
 }
+@media screen and (max-width: $small-screen) {
+  .digital-clock {
+    :hover {
+      color: white;
+    }
+  }
+  .digital-clock-display {
+    padding: 0.4rem;
+    border: 2px solid $green-color;
+    border-radius: 0.5rem;
+  }
+}

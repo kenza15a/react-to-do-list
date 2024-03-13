@@ -101,19 +101,39 @@
 @media screen and (max-width: $medium-screen) {
     .todo {
         &__wrapper {
+         
+          background: #ffffff url("../../assets/bg photo by kenza.jpg") right center/cover
+          no-repeat;
+          @include container(rgb(255, 255, 255));
           display: grid;
           grid-template-columns: 1fr;
+          place-items: center;
           gap: 2rem;
           height: max-content;
           max-height: 50vh;
-          width: 60vh;
-          padding-top:1rem;
+          width: 100%;
+          padding: 1rem;
           overflow: scroll;
           scroll-behavior: smooth;
           scrollbar-width: none;
           animation: todoListAnim 1s ease 0s 1 normal forwards;
           z-index: 1000;
-        }}
+          & .todo__tasks {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+           
+          }
+        }
+      &__options{
+        display: grid;
+        grid-template-rows: 1fr;
+        gap: 1rem;
+        width: 80%;
+        
+      }}
 }
 
 /*********Small devices Mobile*********************/
@@ -125,13 +145,16 @@
           gap: 1rem;
           height: max-content;
           max-height: 75vh;
-          width: 50vh;
+          width: 90%;
           padding: 1rem;
           overflow: scroll;
           scroll-behavior: smooth;
           scrollbar-width: none;
           animation: todoListAnim 1s cubic-bezier(0.32, 0, 0.67, 0) 0s 1 normal forwards;
           z-index: 1000;
+          background: #ffffff url("../../assets/bg photo by kenza.jpg") bottom center/cover
+          no-repeat;
+          @include container(rgb(255, 255, 255));
         }
         &__tasks {
           display: flex;
