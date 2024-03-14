@@ -91,7 +91,10 @@ function ToDoWrapper() {
               ))}
             </ul>
           ) : (
-            <TodoWrapperSkelton/>
+         
+        <div className="no__tasks__text">
+          <h1>No Tasks Found.....</h1>
+        </div>
           )}
         </div>
       </div>

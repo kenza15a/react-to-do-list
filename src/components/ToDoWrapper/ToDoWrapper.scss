@@ -16,16 +16,20 @@
     animation: todoListAnim 1s ease 0s 1 normal forwards;
     z-index: 1000;
     & .todo__tasks {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
-        height: 100%;
-       
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    & .no__tasks__text {
+      padding: 4rem;
+      h1 {
+        color: rgb(178, 178, 178);
       }
+    }
   }
-  
- 
+
   &_text {
     color: rgb(255, 255, 255);
     font-size: 0.9rem;
@@ -39,7 +43,7 @@
     margin-top: 2rem;
   }
   &__options {
-   margin:0.6rem auto ;
+    margin: 0.6rem auto;
     display: grid;
     grid-template-columns: auto 2fr;
     gap: 1rem;
@@ -75,7 +79,7 @@
       border: 1px solid#13c90f;
       &:hover {
         color: white;
-        background-color:#13c90f;
+        background-color: #13c90f;
         border: 1px solid white;
       }
     }
@@ -99,102 +103,100 @@
 
 /*******************tablets****************************/
 @media screen and (max-width: $medium-screen) {
-    .todo {
-        &__wrapper {
-         
-          background: #ffffff url("../../assets/bg photo by kenza.jpg") right center/cover
-          no-repeat;
-          @include container(rgb(255, 255, 255));
-          display: grid;
-          grid-template-columns: 1fr;
-          place-items: center;
-          gap: 2rem;
-          height: max-content;
-          max-height: 50vh;
-          width: 100%;
-          padding: 1rem;
-          overflow: scroll;
-          scroll-behavior: smooth;
-          scrollbar-width: none;
-          animation: todoListAnim 1s ease 0s 1 normal forwards;
-          z-index: 1000;
-          & .todo__tasks {
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            padding: 0;
-            height: 100%;
-           
-          }
-        }
-      &__options{
-        display: grid;
-        grid-template-rows: 1fr;
-        gap: 1rem;
-        width: 80%;
-        
-      }}
+  .todo {
+    &__wrapper {
+      background: #ffffff url("../../assets/bg photo by kenza.jpg") right
+        center/cover no-repeat;
+      @include container(rgb(255, 255, 255));
+      display: grid;
+      grid-template-columns: 1fr;
+      place-items: center;
+      gap: 2rem;
+      height: max-content;
+      max-height: 50vh;
+      width: 100%;
+      padding: 1rem;
+      overflow: scroll;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      animation: todoListAnim 1s ease 0s 1 normal forwards;
+      z-index: 1000;
+      & .todo__tasks {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+    }
+    &__options {
+      display: grid;
+      grid-template-rows: 1fr;
+      gap: 1rem;
+      width: 80%;
+    }
+  }
 }
 
 /*********Small devices Mobile*********************/
 @media screen and (max-width: $small-screen) {
-    .todo {
-        &__wrapper {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 1rem;
-          height: max-content;
-          max-height: 75%;
-          width: 90%;
-          padding: 1rem;
-          overflow: scroll;
-          scroll-behavior: smooth;
-          scrollbar-width: none;
-          animation: todoListAnim 1s cubic-bezier(0.32, 0, 0.67, 0) 0s 1 normal forwards;
-          z-index: 1000;
-          background: #ffffff url("../../assets/bg photo by kenza.jpg") bottom center/cover
-          no-repeat;
-          @include container(rgb(255, 255, 255));
-        }
-        &__tasks {
-          display: flex;
-          flex-direction: column;
-          height: 100%;
-        }
-        &__options {
-          display: grid;
-          grid-template-columns: auto 2fr;
-          gap:0.3rem;
-          align-items: center;
-        }
-        &_text {
-          color: rgb(255, 255, 255);
-          font-size: 0.9rem;
-          font-weight: 300;
-        }
-        &_initial__message {
-          display: inline;
-          font-size: 1.1rem;
-          text-align: center;
-          color: rgba($color: #000000, $alpha: 0.6);
-          margin-top: 2rem;
-        }
-      }
+  .todo {
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      height: max-content;
+      max-height: 75%;
+      width: 90%;
+      padding: 1rem;
+      overflow: scroll;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      animation: todoListAnim 1s cubic-bezier(0.32, 0, 0.67, 0) 0s 1 normal
+        forwards;
+      z-index: 1000;
+      background: #ffffff url("../../assets/bg photo by kenza.jpg") bottom
+        center/cover no-repeat;
+      @include container(rgb(255, 255, 255));
+    }
+    &__tasks {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    &__options {
+      display: grid;
+      grid-template-columns: auto 2fr;
+      gap: 0.3rem;
+      align-items: center;
+    }
+    &_text {
+      color: rgb(255, 255, 255);
+      font-size: 0.9rem;
+      font-weight: 300;
+    }
+    &_initial__message {
+      display: inline;
+      font-size: 1.1rem;
+      text-align: center;
+      color: rgba($color: #000000, $alpha: 0.6);
+      margin-top: 2rem;
+    }
+  }
 
-    .one__task {
-        display: grid;
-        grid-template-columns: 2fr auto;
-        margin-top: 2rem;
-        padding: 0.3rem;
-        align-items: center;
-        width: 100%;
-        border-radius: 1rem;
-        border: 1px solid $secondary-color;
-        background: $secondary-color;;
-        font-size: 1rem;
-        &:hover {
-          background: rgba($color:$fifth-color, $alpha: 0.9);
-        }
-      }
- 
+  .one__task {
+    display: grid;
+    grid-template-columns: 2fr auto;
+    margin-top: 2rem;
+    padding: 0.3rem;
+    align-items: center;
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid $secondary-color;
+    background: $secondary-color;
+    font-size: 1rem;
+    &:hover {
+      background: rgba($color: $fifth-color, $alpha: 0.9);
+    }
+  }
 }
